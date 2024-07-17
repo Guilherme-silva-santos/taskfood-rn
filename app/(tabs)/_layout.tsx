@@ -4,11 +4,15 @@ import React from 'react';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { StatusBar } from 'react-native';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
   return (
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1 }}>
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
@@ -33,5 +37,7 @@ export default function TabLayout() {
         }}
       />
     </Tabs>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
