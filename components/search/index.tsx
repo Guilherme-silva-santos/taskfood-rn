@@ -7,7 +7,7 @@ export function Search(){
            <Feather name="search" size={24} color="#64748b" />
            <TextInput 
            style={styles.input}
-            placeholder="Pesquise por um prato, Restaurante ou Prato"
+            placeholder="Pesquise por um prato..."
            />
         </View>
     )
