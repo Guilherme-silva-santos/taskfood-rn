@@ -21,7 +21,7 @@ export function TrendingFoods(){
         async function getFoods(){
             // the react native when we run the local api we need to put 
             // the IPV4 address, instead of localhost
-            const response = await fetch('http://192.168.0.4:3000/foods')
+            const response = await fetch('http:/192.168.56.1:3000/foods')
             const data = await response.json();
             setFoods(data)
             console.log(data)
