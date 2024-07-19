@@ -1,8 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Pressable, Text, View, StyleSheet } from 'react-native';
 import { Ionicons, Feather } from '@expo/vector-icons';
-
+import * as Location from 'expo-location';
+import { LocationObject } from 'expo-location';
 export function Header() {
+    const [location, setLocation] = useState<LocationObject | null>(null);
+    const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  
+    useEffect(() => {
+        (async () => {
+          let { status } = await Location.requestForegroundPermissionsAsync();
+          if (status !== 'granted') {
+            setErrorMsg('Permission to access location was denied');
+            return;
+          }
+    
+          let location = await Location.getCurrentPositionAsync({});
+          setLocation(location);
+        })();
+      }, []);
+    
+      let text = 'Waiting..';
+      if (errorMsg) {
+        text = errorMsg;
+      } else if (location) {
+        text = JSON.stringify(location);
+      }
+    console.log(text);
+    
+    
+
     return (
         <View style={styles.container}>
             <Pressable style={styles.iconButton}>
@@ -13,7 +40,7 @@ export function Header() {
                 <Text style={styles.locationText}>Localização</Text>
                 <View style={styles.locationRow}>
                     <Feather name="map-pin" size={18} color="#ff0000" />
-                    <Text style={styles.locationBoldText}>Belo Horizonte, MG</Text>
+                    <Text style={styles.locationBoldText}>São Paulo</Text>
                 </View>
             </View>
 
