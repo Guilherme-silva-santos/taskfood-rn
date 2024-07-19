@@ -40,7 +40,7 @@ export function Header() {
                 <Text style={styles.locationText}>Localização</Text>
                 <View style={styles.locationRow}>
                     <Feather name="map-pin" size={18} color="#ff0000" />
-                    <Text style={styles.locationBoldText}>Belo Horizonte, MG{text}</Text>
+                    <Text style={styles.locationBoldText}>São Paulo</Text>
                 </View>
             </View>
 
