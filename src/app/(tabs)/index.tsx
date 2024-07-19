@@ -1,12 +1,13 @@
-import { Banner } from '@/components/banner';
-import { Search } from '@/components/search';
-import { Header } from '@/components/header';
 
+import { Banner } from '@/src/components/banner';
+import { Header } from '@/src/components/header';
+import { Restaurants } from '@/src/components/restaurants';
+import { RestaurantsList } from '@/src/components/restaurantsList';
+import { Search } from '@/src/components/search';
+import { SectionTitleComponent } from '@/src/components/sectionTitleComponent';
+import { TrendingFoods } from '@/src/components/trending';
 import {ScrollView, View } from 'react-native';
-import { SectionTitleComponent } from '@/components/sectionTitleComponent';
-import { TrendingFoods } from '@/components/trending';
-import { Restaurants } from '@/components/restaurants';
-import { RestaurantsList } from '@/components/restaurantsList';
+
 
 export default function HomeScreen() {
   return (
