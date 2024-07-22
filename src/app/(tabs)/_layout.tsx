@@ -31,9 +31,20 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="search"
         options={{
-          title: 'Explore',
+          title: 'Search',
+          headerTitleStyle:{color: labelColor},
+          tabBarLabelStyle:{color: labelColor},
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'search' : 'search-outline'} color={labelColor} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Perfil ',
           headerTitleStyle:{color: labelColor},
           tabBarLabelStyle:{color: labelColor},
           tabBarIcon: ({ color, focused }) => (
