@@ -1,4 +1,5 @@
 import { ScrollView, Text, View } from "react-native";
+import { BaseContainer } from "../baseContainer";
 
 export function Profile() {
     return (
@@ -6,10 +7,9 @@ export function Profile() {
         style={{ flex: 1 }}
         showsVerticalScrollIndicator={false}
       >
-        <View style={{ width: '100%', padding: 16 }}>
-            <Text>Profile</Text>
-        </View>
-        <Text>Profile</Text>
+        <BaseContainer headerTitle="Perfil">
+          <Text>Profile</Text>
+        </BaseContainer>
       </ScrollView>
     );
 }

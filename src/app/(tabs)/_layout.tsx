@@ -6,6 +6,7 @@ import { useColorScheme } from '@/src/hooks/useColorScheme';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'react-native';
 import { TabBarIcon } from '@/src/components/navigation/TabBarIcon';
+import { colors } from '@/src/theme/theme';
 export default function TabLayout() {
   const colorScheme = useColorScheme();
   const labelColor = 'gray';
@@ -13,7 +14,7 @@ export default function TabLayout() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="light-content" backgroundColor={colors.red} />
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
