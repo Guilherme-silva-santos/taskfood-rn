@@ -1,4 +1,4 @@
-import { colors, fontFamily } from "@/src/theme/theme";
+import { colors } from "@/src/theme/theme";
 import { FC } from "react";
 import {
   StyleSheet,
@@ -22,8 +22,7 @@ export const LinkButton: FC<LinkButtonProps> = ({ text, ...rest }) => {
 const styles = StyleSheet.create({
   container: {},
   text: {
-    fontFamily: fontFamily.barlow.semiBold,
     fontSize: 16,
-    color: colors.pink,
+    color: colors.gray[700],
   },
 });

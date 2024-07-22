@@ -1,4 +1,4 @@
-import { colors, fontFamily } from "@/src/theme/theme";
+import { colors } from "@/src/theme/theme";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FC } from "react";
 import {
@@ -32,7 +32,7 @@ export const Button: FC<ButtonProps> = ({
 
   switch (variant) {
     case "default":
-      buttonColor = colors.green[200];
+      buttonColor = colors.red;
       buttonTextColor = colors.white;
       break;
     case "delete":
@@ -41,7 +41,7 @@ export const Button: FC<ButtonProps> = ({
       break;
     case "secondary":
       buttonColor = colors.white;
-      buttonTextColor = colors.green[200];
+      buttonTextColor = colors.red;
     default:
       break;
   }
@@ -83,7 +83,6 @@ const styles = StyleSheet.create({
     gap: 16,
   },
   text: {
-    fontFamily: fontFamily.cooper,
     fontSize: 16,
     textTransform: "capitalize",
   },

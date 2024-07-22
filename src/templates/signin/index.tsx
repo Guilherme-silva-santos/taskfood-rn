@@ -1,17 +1,25 @@
-import React from 'react';
 import { StyleSheet, KeyboardAvoidingView } from 'react-native';
 import { BaseLoginContainer } from '../baseLoginContainer';
 import { Input } from '@/src/components/input';
 import { PasswordInput } from '@/src/components/passWordInput';
 import { LinkButton } from '@/src/components/linkButton';
 import { Button } from '@/src/components/button';
-import { router } from 'expo-router';
+import { useRouter } from 'expo-router';
 
 export default function SigninScreen() {
+    const router = useRouter();
+
+    const handleSignUp = () => {
+        router.navigate("/signup");
+    };
 
     const handleForgotPassword = () => {
-        router.navigate("/forgot-password");
-      };
+        router.push("/forgot-password");
+    };
+
+    const handleSignIn = () => {
+        router.replace("/(tabs)/"); 
+    };
 
     return (
         <BaseLoginContainer text="Seja bem-vindo" title="Login" >
@@ -23,9 +31,6 @@ export default function SigninScreen() {
                 <PasswordInput
                     placeholder="Digite aqui..."
                     label="Senha *"
-                    onBlur={onBlur}
-                    value={value}
-                    onChangeText={onChange}
                 />
                 <LinkButton
                     text="Esqueci minha senha"
@@ -34,7 +39,12 @@ export default function SigninScreen() {
                 />
                 <Button
                     text="Entrar"
-                    onPress={handleSubmit(onSubmit)}
+                    onPress={handleSignIn}
+                />
+                <Button 
+                    text="Criar conta" 
+                    variant="secondary"
+                    onPress={handleSignUp}
                 />
             </KeyboardAvoidingView>
         </BaseLoginContainer>

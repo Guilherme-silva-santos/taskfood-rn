@@ -1,3 +1,4 @@
+import { colors } from "@/src/theme/theme";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FC, useState } from "react";
 import {
@@ -56,7 +57,6 @@ const styles = StyleSheet.create({
   input: {
     width: "90%",
     color: colors.gray[700],
-    fontFamily: fontFamily.barlow.regular,
     fontSize: 14,
   },
   iconButton: {
@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   inputLabel: {
-    fontFamily: fontFamily.barlow.regular,
     color: colors.gray[700],
     fontSize: 14,
   },
