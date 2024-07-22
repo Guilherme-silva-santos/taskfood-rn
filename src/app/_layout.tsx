@@ -28,7 +28,7 @@ export default function RootLayout() {
       <StatusBar barStyle="light-content" />
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="signup/index" options={{ headerShown: false }} />
+        <Stack.Screen name="signup/index" options={{ headerShown: false,  }}  />
         <Stack.Screen name="+not-found" />
       </Stack>
     </>

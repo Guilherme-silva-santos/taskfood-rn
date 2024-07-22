@@ -10,7 +10,7 @@ export default function SignupScreen() {
     const router = useRouter();
 
     const handleSignIn = () => {
-        router.navigate("/signin");
+        router.back();
     };
     const handleLogin = () => {
         router.replace("/(tabs)/"); 
