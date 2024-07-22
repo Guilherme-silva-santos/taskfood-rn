@@ -12,7 +12,6 @@ export function Home() {
       <ScrollView
         style={{ flex: 1 }}
         showsVerticalScrollIndicator={false}
-        keyboardDismissMode="on-drag"
       >
         <View style={{ width: '100%', padding: 16 }}>
           <Header />
